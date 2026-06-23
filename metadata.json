@@ -1,0 +1,6 @@
+{
+  "name": "Urban Nest Realty",
+  "description": "Your all housing needs served at one Place. Explore buy, rent, plots, and PG details, calculators, and real estate insights.",
+  "requestFramePermissions": ["microphone", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

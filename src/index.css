@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+/* Google Sign-In Button Styles */
+.gsi-material-button {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -webkit-appearance: none;
+  background-color: WHITE;
+  background-image: none;
+  border: 1px solid #747775;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #1f1f1f;
+  cursor: pointer;
+  font-family: 'Roboto', arial, sans-serif;
+  font-size: 14px;
+  height: 40px;
+  letter-spacing: 0.25px;
+  outline: none;
+  overflow: hidden;
+  padding: 0 12px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: background-color .218s, border-color .218s, box-shadow .218s;
+  transition: background-color .218s, border-color .218s, box-shadow .218s;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+  max-width: 400px;
+  min-width: min-content;
+}
+
+.gsi-material-button .gsi-material-button-icon {
+  height: 20px;
+  margin-right: 12px;
+  min-width: 20px;
+  width: 20px;
+}
+
+.gsi-material-button .gsi-material-button-content-wrapper {
+  -webkit-align-items: center;
+  align-items: center;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.gsi-material-button .gsi-material-button-contents {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  font-family: 'Google Sans', arial, sans-serif;
+  font-weight: 550;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
+.gsi-material-button .gsi-material-button-state {
+  -webkit-transition: opacity .218s;
+  transition: opacity .218s;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.gsi-material-button:hover {
+  -webkit-box-shadow: 0 1px 2px 0 rgba(60,64,67, .30), 0 1px 3px 1px rgba(60,64,67, .15);
+  box-shadow: 0 1px 2px 0 rgba(60,64,67, .30), 0 1px 3px 1px rgba(60,64,67, .15);
+}
+
+.gsi-material-button:hover .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 4%;
+}
+
+.gsi-material-button:active .gsi-material-button-state {
+  background-color: #303030;
+  opacity: 12%;
+}
+
+.gsi-material-button:disabled {
+  cursor: default;
+  background-color: #ffffff;
+  border-color: #1f1f1f1f;
+}
+
+.gsi-material-button:disabled .gsi-material-button-contents {
+  color: #1f1f1f1f;
+}
+
+.gsi-material-button:disabled .gsi-material-button-icon {
+  opacity: 30%;
+}
+
+/* Premium Liquid Glass UI Kit styles */
+.glass-panel {
+  background: rgba(13, 22, 37, 0.75);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-top-color: rgba(255, 255, 255, 0.22);
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.glass-gloss-shine {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.03) 100%);
+}
+
+.glass-glow-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.42) 0%, rgba(6, 182, 212, 0) 70%);
+}
+
+.glass-glow-purple {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(168, 85, 247, 0) 70%);
+}
+
+.glass-glow-orange {
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.3) 0%, rgba(239, 68, 68, 0) 70%);
+}
+
+/* Rounded gloss effect for high quality reflections */
+.glass-gloss-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+@keyframes glassGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 16px rgba(6, 182, 212, 0.5), inset 0 1px 1px rgba(255,255,255,0.25);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(6, 182, 212, 0.75), inset 0 1px 1px rgba(255,255,255,0.35);
+  }
+}
+
+.glass-button-cyan {
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.85) 0%, rgba(8, 145, 178, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 16px rgba(6, 182, 212, 0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.glass-button-cyan:hover {
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.98) 0%, rgba(8, 145, 178, 1) 100%);
+  transform: translateY(-1px);
+}
+
+.glass-button-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(168, 85, 247, 0.45);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.18);
+  transition: all 0.3s;
+}
+
+.glass-button-secondary:hover {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.75);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.4);
+}
+
+.glass-input-glow {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2.2px solid rgba(6, 182, 212, 0.45);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s;
+}
+
+.glass-input-glow:focus {
+  background: rgba(255, 255, 255, 0.06);
+  border-bottom-color: rgba(6, 182, 212, 0.98);
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
